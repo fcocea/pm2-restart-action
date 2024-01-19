@@ -1,0 +1,25 @@
+name: "Restart PM2 service Action"
+author: fcocea
+descrption: "Restart the remote pm2 service upon detecting changes to your repository"
+
+inputs:
+  SSH_IP:
+    description: "SSH IP address of the remote server"
+    required: true
+  SSH_PORT:
+    description: "SSH Port of the remote server"
+    required: true
+    default: 22
+  SSH_USER:
+    description: "SSH Username for connecting to the remote server"
+    required: true
+  FOLDER:
+    description: "Folder where the pm2 service is located"
+    required: true
+  PM2_SERVICE:
+    description: "Name of the pm2 service"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"

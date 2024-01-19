@@ -1,0 +1,17 @@
+name: remote ssh
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: restart pm2 service
+        uses: "./"
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          folder: ${{secrets.folder}}
+          service: ${{secrets.service}}
