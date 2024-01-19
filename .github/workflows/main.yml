@@ -9,9 +9,8 @@ jobs:
       - name: restart pm2 service
         uses: "./"
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          folder: ${{secrets.folder}}
-          service: ${{secrets.service}}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PASS: ${{ secrets.SSH_PASSWORD }}
+          FOLDER: ${{secrets.FOLDER}}
+          SERVICE: "test"

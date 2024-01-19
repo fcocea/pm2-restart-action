@@ -3,7 +3,7 @@ author: fcocea
 descrption: "Restart the remote pm2 service upon detecting changes to your repository"
 
 inputs:
-  SSH_IP:
+  SSH_HOST:
     description: "SSH IP address of the remote server"
     required: true
   SSH_PORT:
@@ -12,6 +12,9 @@ inputs:
     default: 22
   SSH_USER:
     description: "SSH Username for connecting to the remote server"
+    required: true
+  SSH_PASS:
+    description: "SSH Password for connecting to the remote server"
     required: true
   FOLDER:
     description: "Folder where the pm2 service is located"
