@@ -12,10 +12,10 @@ if [ "\${PM2_EXIST}" -eq 0 ]; then
   echo "ERROR | PM2 service \${PM2_SERVICE} does not exist."
   exit 1
 fi
-if ! git rev-parse --verify ${REPO_BRANCH} > /dev/null 2>&1; then
-  echo "ERROR | Branch ${REPO_BRANCH} does not exist. Exiting."
-  exit 1
-fi
+# if ! git rev-parse --verify ${REPO_BRANCH} > /dev/null 2>&1; then
+#   echo "ERROR | Branch ${REPO_BRANCH} does not exist. Exiting."
+#   exit 1
+# fi
 git checkout \${REPO_BRANCH}
 git pull
 ${PNPM} i
