@@ -1,0 +1,1 @@
+Simple way to restart a service on a remote server using PM2 for pnpm projects.
