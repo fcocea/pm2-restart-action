@@ -1,6 +1,6 @@
 name: "Restart PM2 service Action"
 author: fcocea
-descrption: "Restart the remote pm2 service upon detecting changes to your repository"
+description: "Restart the remote pm2 service upon detecting changes to your repository"
 
 inputs:
   SSH_HOST:
