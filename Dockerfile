@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y openssh-client sshpass
+RUN apt-get update && apt-get install -y sshpass
 
 COPY ./entrypoint.sh /bin/entrypoint.sh
 WORKDIR /

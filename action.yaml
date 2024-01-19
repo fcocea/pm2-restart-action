@@ -22,7 +22,13 @@ inputs:
   PM2_SERVICE:
     description: "Name of the pm2 service"
     required: true
-
+  REPO_BRANCH:
+    description: "Branch of the repository"
+    required: false
+    default: "main"
 runs:
   using: "docker"
   image: "Dockerfile"
+branding:
+  icon: "terminal"
+  color: "gray-dark"
