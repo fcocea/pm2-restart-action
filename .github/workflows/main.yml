@@ -13,4 +13,4 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PASS: ${{ secrets.SSH_PASSWORD }}
           FOLDER: ${{secrets.FOLDER}}
-          SERVICE: "test"
+          PM2_SERVICE: "test"
