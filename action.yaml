@@ -29,6 +29,14 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env: 
+    SSH_HOST: ${{ inputs.SSH_HOST }}
+    SSH_PORT: ${{ inputs.SSH_PORT }}
+    SSH_USER: ${{ inputs.SSH_USER }}
+    SSH_PASS: ${{ inputs.SSH_PASS }}
+    FOLDER: ${{ inputs.FOLDER }}
+    PM2_SERVICE: ${{ inputs.PM2_SERVICE }}
+    REPO_BRANCH: ${{ inputs.REPO_BRANCH }}
 branding:
   icon: "terminal"
   color: "gray-dark"
