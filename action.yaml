@@ -1,6 +1,9 @@
-name: "Restart PM2 service Action"
+name: "pm2-restart-action"
 author: fcocea
-description: "Restart the remote pm2 service upon detecting changes to your repository"
+description: "Restart a remote PM2 service over SSH after repository changes"
+branding:
+  icon: "terminal"
+  color: "gray-dark"
 
 inputs:
   SSH_HOST:
@@ -37,6 +40,3 @@ runs:
     FOLDER: ${{ inputs.FOLDER }}
     PM2_SERVICE: ${{ inputs.PM2_SERVICE }}
     REPO_BRANCH: ${{ inputs.REPO_BRANCH }}
-branding:
-  icon: "terminal"
-  color: "gray-dark"
