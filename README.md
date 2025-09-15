@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Restart service
-        uses: fcocea/pm2-restart-action@v1.0
+        uses: fcocea/pm2-restart-action@v1
         with:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
